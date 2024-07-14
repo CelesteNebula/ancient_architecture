@@ -1,0 +1,37 @@
+前端界面布局：
+    1、主界面（从上到下）：
+        功能组件：首页（默认）、我的
+        菜单栏：首页、我的
+    2、首页（从上到下）：
+        知名古建筑图片轮播组件
+        世界古建筑知名派别介绍组件：中式建筑、西式建筑、其他建筑
+        古建筑拍照识别组件（需登陆后才能使用）
+    3、我的（从上到下）：
+        登陆组件
+        身份信息组件
+        识别记录组件、识别额度组件、使用说明组件、关于我们组件、联系客服组件
+    4、古建筑拍照识别组件（从上到下）：
+        用户上传图片
+        识别结果、概率（前三）
+        对应类别介绍
+
+后端：
+    1、config：
+        数据库连接：
+            库名：ancient_architecture
+            表名：user
+    2、model：
+        user：id、password、identity（vip/regular）、times（int类型）
+    3、route：
+        ancient_architecture_route:
+            /ancientArchitectureClassify：调用图片识别、结果返回方法
+            /ancientArchitectureIntroduce：调用建筑介绍方法
+        user_route:
+            /login：调用登陆方法
+    4、service：
+        login：登陆功能实现方法
+        classify：建筑识别方法
+        returnResult：识别结果返回方法
+        introduce：建筑介绍方法
+    5、app.py：程序入口
+

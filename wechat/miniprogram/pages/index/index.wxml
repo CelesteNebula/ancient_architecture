@@ -1,0 +1,49 @@
+<view class="container">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="introduction-section">
+    <view class="tab">
+      <view class="category" data-category="western" bindtap="switchCategory">
+        <image src="/assets/icon/圣索菲亚教堂.png" class="category-icon" />
+        <text class="category-text">西式建筑</text>
+      </view>
+      <view class="category" data-category="chinese" bindtap="switchCategory">
+        <image src="/assets/icon/武汉黄鹤楼.png" class="category-icon" />
+        <text class="category-text">中式建筑</text>
+      </view>
+      <view class="category" data-category="other" bindtap="switchCategory">
+        <image src="/assets/icon/西宁塔尔寺.png" class="category-icon" />
+        <text class="category-text">其他建筑</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 轮播介绍 -->
+  <swiper class="building-swiper" autoplay="true" interval="2500" duration="500">
+    <block wx:for="{{buildingDetails}}" wx:key="index">
+      <swiper-item>
+        <view class="detail-content">
+          <image src="{{item.image}}" mode="heightFix" class="detail-content-image"></image>
+          <text class="detail-content-description">{{item.description}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <image src="/assets/icon/logo.png" class="mylogo" bindtap="openExternalLink" />
+
+  <!--
+  <view class="photo-recognition">
+    <image src="/assets/icon/拍照识别.png" class="photo-icon" bindtap="handlePhotoRecognition" />
+    <text class="photo-text">拍照识别</text>
+  </view>
+  -->
+
+</view>
+<tabbar></tabbar>

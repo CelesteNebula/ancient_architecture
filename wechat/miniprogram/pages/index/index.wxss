@@ -1,0 +1,110 @@
+/* 根容器样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px; /* 确保底部内容不会被tabbar遮挡 */
+  -webkit-tap-highlight-color: transparent; /* 移除点击时的淡蓝色响应 */
+  
+}
+
+/* swiper 组件样式 */
+.swiper {
+  width: 100%;
+  height: 200px;
+}
+
+/* image 组件样式 */
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 引入部分样式 */
+.introduction-section {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+}
+
+/* tab 样式 */
+.tab {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* category 样式 */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* category 图标样式 */
+.category-icon {
+  width: 90px;
+  height: 100px;
+}
+
+/* category 文字样式 */
+.category-text {
+  margin-top: 5px;
+}
+
+/* 轮播介绍样式 */
+.building-swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-content-image {
+  margin-top: 15px;
+  height: 30px;
+}
+
+.detail-content-description {
+  margin-top: 15px;
+  line-height: 24px; /* 行距设置*/
+  text-align: left; /* 文字左对齐 */
+}
+
+.mylogo {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer; /* 添加鼠标悬停手型 */
+}
+
+/*.photo-recognition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.photo-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.photo-text {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+}*/

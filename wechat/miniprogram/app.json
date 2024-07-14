@@ -1,0 +1,44 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    },
+    "scope.camera": {
+      "desc": "你的相机权限将用于小程序拍照识别的功能"
+    }
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/webview/webview",
+    "pages/result/result",
+    "pages/introduction/introduction",
+    "pages/tabbar/tabbar"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/icon/home.png",
+        "selectedIconPath": "/assets/icon/home.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/icon/my.png",
+        "selectedIconPath": "/assets/icon/my.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "古建筑派别识别",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar"
+  }
+}

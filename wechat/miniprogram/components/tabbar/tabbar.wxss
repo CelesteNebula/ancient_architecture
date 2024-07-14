@@ -1,0 +1,41 @@
+/* components/tabbar/tabbar.wxss */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.tabbar-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.special {
+  position: relative;
+  top: -30px;
+}
+
+.tabbar-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.photo-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.tabbar-text {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}

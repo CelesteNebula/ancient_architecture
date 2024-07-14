@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="menu">
+    <block wx:for="{{categories}}" wx:key="index">
+      <view bindtap="switchCategory" data-category="{{item}}" class="menu-item {{currentCategory === item ? 'active' : ''}}">
+        <text>{{item === 'chinese' ? '中式建筑' : item === 'western' ? '西式建筑' : '其他建筑'}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="content">
+    <block wx:for="{{details[currentCategory]}}" wx:key="index">
+      <view class="detail-item">
+        <view bindtap="toggleDetail" data-index="{{index}}" class="detail-header">
+          <text>{{item.name}}</text>
+          <text class="icon">{{expanded === index ? '▲' : '▼'}}</text>
+        </view>
+        <view class="detail-content" wx:if="{{expanded === index}}">
+          <image src="{{item.image}}" mode="widthFix" style="width:100%;"></image> <!-- 动态渲染图片 -->
+          <text>{{item.description}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

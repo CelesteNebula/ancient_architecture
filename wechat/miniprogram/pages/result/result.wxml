@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="image-section">
+    <image src="{{imageUrl}}" class="uploaded-image" />
+  </view>
+  <view class="result-section">
+    <text class="result-title">识别结果</text>
+    <block wx:for="{{results}}" wx:key="index">
+      <view class="result-item">
+        <view class="result-card">
+          <text class="result-label">{{item.label}}</text>
+          <text class="result-probability">{{item.probability}}%</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f2f5; /* 背景颜色 */
+  -webkit-tap-highlight-color: transparent; /* 移除点击时的淡蓝色响应 */
+}
+
+.menu {
+  width: 30%;
+  background-color: #ffffff; /* 菜单背景颜色 */
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #e0e0e0;
+}
+
+.menu-item {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu-item.active {
+  background-color: #303d54;
+  color: #fff;
+}
+
+.menu-item:hover {
+  background-color: #303d54;
+}
+
+.content {
+  width: 70%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+}
+
+.detail-header {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s;
+}
+
+.detail-header:hover {
+  background-color: #f0f0f0;
+}
+
+.detail-content {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+
+.detail-content image {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,62 @@
+<view class="container">
+  <view class="tab">
+    <view class="login-section" wx:if="{{!isLoggedIn}}" bindtap="wechatLogin">
+      <image src="/assets/icon/用户.png" class="login-icon" />
+      <text class="login-text">请登录</text>
+    </view>
+    <view class="login-section" wx:if="{{isLoggedIn}}">
+      <image src="{{userAvatar}}" class="login-icon" />
+      <text class="login-text">{{userNickname}}</text>
+    </view>
+  </view>
+
+  <view class="info-container">
+    <view class="info-item" bindtap="showIdentity">
+      <image src="/assets/icon/身份信息.png" class="info-icon" />
+      <text class="info-text">身份信息</text>
+    </view>
+    <view class="info-item" bindtap="showQuota">
+      <image src="/assets/icon/识别额度.png" class="info-icon" />
+      <text class="info-text">识别额度</text>
+    </view>
+    <view class="info-item" bindtap="showUsage">
+      <image src="/assets/icon/使用说明.png" class="info-icon" />
+      <text class="info-text">使用说明</text>
+    </view>
+    <view class="info-item" bindtap="showAbout">
+      <image src="/assets/icon/关于我们.png" class="info-icon" />
+      <text class="info-text">关于我们</text>
+    </view>
+  </view>
+
+  <!-- 身份信息弹窗 -->
+  <view class="modal-wrapper" wx:if="{{showIdentityModal}}" bindtap="closeModal">
+    <view class="modal-content" catchtap="preventClose">
+      <image src="{{userAvatar}}" class="avatar" />
+      <text class="identity">{{identityText}}</text>
+    </view>
+  </view>
+
+  <!-- 识别额度弹窗 -->
+  <view class="modal-wrapper" wx:if="{{showQuotaModal}}" bindtap="closeModal">
+    <view class="modal-content" catchtap="preventClose">
+      <text class="title">识别额度：</text>
+      <text class="quota">{{times}}</text>
+    </view>
+  </view>
+
+  <!-- 使用说明弹窗 -->
+  <view class="modal-wrapper" wx:if="{{showUsageModal}}" bindtap="closeModal">
+    <view class="modal-content" catchtap="preventClose">
+      <image src="/assets/image/wx.png" class="usage-image" />
+    </view>
+  </view>
+
+  <!-- 关于我们弹窗 -->
+  <view class="modal-wrapper" wx:if="{{showAboutModal}}" bindtap="closeModal">
+    <view class="modal-content" catchtap="preventClose">
+      <image src="/assets/image/wx.png" class="about-image" />
+    </view>
+  </view>
+</view>
+<tabbar></tabbar>
