@@ -62,7 +62,7 @@ Component({
       const that = this;
       const app = getApp();
       wx.uploadFile({
-        url: 'http://192.168.1.14:5000/ancientArchitecture/recognize',
+        url: 'http://192.168.10.32:5000/ancientArchitecture/recognize',
         filePath: filePath,
         name: 'image',
         formData: {

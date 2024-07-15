@@ -37,7 +37,7 @@ Page({
             success: function (userRes) {
               // 将用户ID发送到后端
               wx.request({
-                url: 'http://192.168.1.14:5000/user/login', // 后端接口地址
+                url: 'http://192.168.10.32:5000/user/login', // 后端接口地址
                 method: 'POST',
                 data: {
                   userId: res.code,
